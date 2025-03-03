@@ -1,94 +1,167 @@
 /* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  h1, h2, h3, h4 {
-    color: #2c3e50;
-    margin: 0 0 15px 0;
-  }
-  
-  /* Container for the entire app */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+}
+
+/* Container for the entire app */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+button:active {
+  background-color: #1c5980;
+  transform: translateY(0);
+}
+
+/* Country Card */
+.country-card {
+  background: linear-gradient(135deg, #ecf0f1, #dfe6e9);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.country-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.country-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #2c3e50;
+}
+
+/* State Card */
+.state-card {
+  background: linear-gradient(135deg, #dfe6e9, #bdc3c7);
+  padding: 15px;
+  margin: 10px 0 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.state-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.state-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #34495e;
+}
+
+/* City Card */
+.city-card {
+  background: linear-gradient(135deg, #b2bec3, #95a5a6);
+  padding: 12px;
+  margin: 8px 0 8px 40px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.city-card p {
+  margin: 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+/* Action Buttons (Edit, Delete) */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Add Button */
+.add-button {
+  background-color:#3498db;
+}
+
+.add-button:hover {
+  background-color: #3498db;
+}
+
+.add-button:active {
+  background-color: #3498db;
+}
+
+/* Delete Button */
+.delete-button {
+  background-color: #3498db;
+}
+
+.delete-button:hover {
+  background-color: #3498db;
+}
+
+.delete-button:active {
+  background-color: #3498db;
+}
+
+/* Edit Button */
+.edit-button {
+  background-color: #3498db;
+}
+
+.edit-button:hover {
+  background-color: #3498db;
+}
+
+.edit-button:active {
+  background-color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
   .app-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Buttons */
-  button {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  button:hover {
-    background-color: #2980b9;
-    transform: translateY(-1px);
-  }
-  
-  button:active {
-    background-color: #1c5980;
-    transform: translateY(0);
-  }
-  
-  /* Country Card */
-  .country-card {
-    background: linear-gradient(135deg, #ecf0f1, #dfe6e9);
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .country-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  .country-card h2 {
-    margin: 0 0 10px 0;
-    font-size: 24px;
-    color: #2c3e50;
-  }
-  
-  /* State Card */
-  .state-card {
-    background: linear-gradient(135deg, #dfe6e9, #bdc3c7);
     padding: 15px;
-    margin: 10px 0 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
-  .state-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+
+  .country-card, .state-card, .city-card {
+    margin-left: 10px;
   }
-  
-  .state-card h4 {
-    margin: 0 0 8px 0;
-    font-size: 20px;
-    color: #34495e;
-  }
-  
-  /* City Card */
-  .city-card {
-    background: linear-gradient(135deg, #b2bec3, #95a5a6);
-    padding: 12px}
+}
